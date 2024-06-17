@@ -1,11 +1,17 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+var pronoun = ["the", "our"];
+var adj = ["great", "big"];
+var noun = ["jogger", "racoon"];
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+var domainCombinations = [];
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+for (var p of pronoun) {
+  for (var a of adj) {
+    for (var n of noun) {
+      domainCombinations.push(p + a + n + ".com");
+    }
+  }
+}
+
+for (var domain of domainCombinations) {
+  console.log(domain);
+}
